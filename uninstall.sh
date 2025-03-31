@@ -17,3 +17,6 @@ echo "[*] Reloading systemd daemon..."
 systemctl daemon-reload
 
 echo "[✔] Uninstallation complete."
+echo ""
+echo "[✔] Done. Press Enter to close this window."
+read
