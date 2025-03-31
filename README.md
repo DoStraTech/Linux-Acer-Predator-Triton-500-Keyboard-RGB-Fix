@@ -1,12 +1,17 @@
 # Acer Predator Triton 500 – RGB Keyboard Flicker Fix (Linux)
 
-Fix RGB Keyboard Flicker on Acer Predator Triton 500 (Linux / Ubuntu 24.04) – A systemd + Python script to stop flickering and initialize RGB lighting via USB HID. Works on boot and resume. Tested on PT515-52.
+Fix on-key RGB Keyboard Flicker on Acer Predator Triton 500 (Linux / Ubuntu 24.04) – A systemd + Python script to stop flickering and initialize RGB lighting via USB HID. Works on boot and resume. Tested on PT515-52.
 
 This script fixes the keyboard flickering issue on the **Acer Predator Triton 500 (PT515-52)** when running Linux. 
 
 The fix sends a custom USB HID command to the RGB keyboard via `pyusb` and sets it to plain white.
 
 It runs automatically on boot and after waking from suspend.
+
+# Supported Keyboards: per-key RGB, not 4-zone 
+
+This repo supports full per-key RGB control on Predator laptops with individually addressable keys.  
+For 4-zone keyboards and Turbo button support, see the wonderfull [JafarAkhondali's acer-predator-turbo-and-rgb-keyboard-linux-module](https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module).
 
 ---
 
