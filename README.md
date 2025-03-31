@@ -29,17 +29,16 @@ It is also very unprofessional. This script sends a SET_REPORT command to reinit
 
 ## Auto-install-script
 
-Just run:
+Just run this one-liner (and enter the sudo password + enter):
 
 ```bash
 wget -O - https://raw.githubusercontent.com/DoStraTech/Linux-Acer-Predator-Triton-500-Keyboard-RGB-Fix/main/install.sh | sudo bash
 ```
 
 
-
-
 ### Manual Installation
 
+If you don't trust random scripts from internet that ask you to sudo...
 You can also install the fix manually by following these steps:
 
 #### 1. Install dependencies
