@@ -26,3 +26,6 @@ cd /
 rm -rf /tmp/keyboard-fix
 
 echo "[✔] Installation complete. The RGB keyboard fix is now active."
+echo ""
+echo "[✔] Done. Press Enter to close this window."
+read
