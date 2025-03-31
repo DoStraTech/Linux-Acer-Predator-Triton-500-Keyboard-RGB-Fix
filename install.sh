@@ -3,14 +3,11 @@ set -e
 
 echo "[*] Installing dependencies..."
 apt-get update
-apt-get install -y git python3-pip
+apt-get install -y git python3 python3-usb
 
 echo "[*] Cloning fix repository..."
 git clone https://github.com/DoStraTech/Linux-Acer-Predator-Triton-500-Keyboard-RGB-Fix.git /tmp/keyboard-fix
 cd /tmp/keyboard-fix
-
-echo "[*] Installing Python requirements..."
-pip3 install pyusb
 
 echo "[*] Copying fix script to /usr/local/bin..."
 cp fix_keyboard.py /usr/local/bin/fix_keyboard.py
