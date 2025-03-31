@@ -21,3 +21,66 @@ It is also very unprofessional. This script sends a SET_REPORT command to reinit
 
 - only Python 3 with `pyusb` (Python USB library)
 - systemd (used on most modern Linux systems)
+
+## Auto-install-script
+
+Just run:
+
+```bash
+wget -O - https://raw.githubusercontent.com/DoStraTech/Linux-Acer-Predator-Triton-500-Keyboard-RGB-Fix/main/install.sh | sudo bash
+```
+
+
+
+
+### Manual Installation
+
+You can also install the fix manually by following these steps:
+
+#### 1. Install dependencies
+
+```bash
+sudo apt-get update
+sudo apt-get install -y git python3 python3-usb
+```
+
+#### 2. Clone the repository
+
+```bash
+git clone https://github.com/DoStraTech/Linux-Acer-Predator-Triton-500-Keyboard-RGB-Fix.git
+cd Linux-Acer-Predator-Triton-500-Keyboard-RGB-Fix
+```
+
+#### 3. Copy the Python script
+
+```bash
+sudo cp fix_keyboard.py /usr/local/bin/fix_keyboard.py
+sudo chmod +x /usr/local/bin/fix_keyboard.py
+```
+
+#### 4. Install the systemd service
+
+```bash
+sudo cp fix-keyboard.service /etc/systemd/system/fix-keyboard.service
+```
+
+#### 5. Enable and start the service
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable fix-keyboard.service
+sudo systemctl start fix-keyboard.service
+```
+
+#### 6. (Optional) Clean up the repo
+
+```bash
+cd ..
+rm -rf Linux-Acer-Predator-Triton-500-Keyboard-RGB-Fix
+```
+
+---
+
+After installation, the RGB keyboard fix will be applied on boot and after resume from suspend.
+
+
